@@ -5,31 +5,48 @@ var losses= 0;
 var guesses= 9;
 
 
+var resetguesses = function() {
+    guesses = 9;
+    document.querySelector('#game').innerhtml='';
+}
+
+
 document.onkeyup = function() {
-    // var userGuess = event.key;
-    var userGuess =String.fromCharCode(event.keyCode).toLowerCase();
+    var userGuess = event.key;
+    var yourGuess= userGuess;
+    // var userGuess =String.fromCharCode(event.keyCode).toLowerCase();
 
     console.log(userGuess);
 
     var computerPick = letters[Math.floor(Math.random() * letters.length)];
 
     console.log(computerPick);
+ {
 
 if (userGuess === computerPick) {
     wins++;
+    resetguesses();
 } else if (userGuess !== computerPick) {
     guesses--;
 } 
-if (guesses = 0) {
+
+if (guesses == 0) {
     losses++;
-}
+    resetguesses();
+}}
 
 var html = 
-// "<p> Press a key to start playing </p>" + "<p> wins:" + wins + "</p>" +
+"<p> wins:" + wins + "</p>" +
 "<p> losses: " + losses + "</p>" + 
-"<p> guesses: " + guesses + "</p>" +
-"<p> User Guess: " + userGuess + "</p>";
+"<p> guesses: " + guesses + "</p>";
+// "<p> User Guess: " + userGuess + "</p>";
 
 document.querySelector('#game'). innerHTML = html;
+var yourGuess = " " + yourGuess;
+if (guesses == 9) {
+    document.querySelector("#guess").innerHTML = "Your guesses:";
+} else {
+document.querySelector("#guess").innerHTML += yourGuess;}
+
 
 }
