@@ -1,4 +1,23 @@
+body{
+    background-image:url(../images/Psychic\ background.jpg); text-align: center;
+}
 
+h1{
+    color:white; font-family: Arial, Helvetica, sans-serif; font-size: 100px;
+}
 
+h2{
+    color:white; font-family: Arial, Helvetica, sans-serif; font-size: 50px;
+}
 
+.title{
+    color:white; font-family: Arial, Helvetica, sans-serif; font-size: 30px;
+}
 
+#guess{
+    color:white; font-family: Arial, Helvetica, sans-serif; font-size: 30px;
+}
+
+#game{
+    color:white; font-family: Arial, Helvetica, sans-serif; font-size: 20px;
+}
