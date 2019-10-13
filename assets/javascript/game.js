@@ -14,7 +14,7 @@ var resetguesses = function() {
 document.onkeyup = function() {
     var userGuess = event.key;
     var yourGuess= userGuess;
-    // var userGuess =String.fromCharCode(event.keyCode).toLowerCase();
+    
 
     console.log(userGuess);
 
@@ -39,7 +39,7 @@ var html =
 "<p> wins:" + wins + "</p>" +
 "<p> losses: " + losses + "</p>" + 
 "<p> guesses: " + guesses + "</p>";
-// "<p> User Guess: " + userGuess + "</p>";
+
 
 document.querySelector('#game'). innerHTML = html;
 var yourGuess = " " + yourGuess;
